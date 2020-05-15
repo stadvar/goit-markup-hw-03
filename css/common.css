@@ -1,0 +1,198 @@
+:root {
+  --active-color: #2196f3;
+  --main-color: #757575;
+  --head-collor: #212121;
+  --white-color: #ffffff;
+  --team-bg-color: #f5f4fa;
+}
+/* #2196F3 */
+/* #212121 */
+/* #FFFFFF */
+/* #757575 */
+/* rgba(255, 255, 255, 0.6) */
+
+body {
+  background-color: #ffffff;
+  color: var(--main-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  display: inline-block;
+  color: var(--head-collor);
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  /* margin-bottom: 10px; */
+  margin-right: 85px;
+}
+.logo .web {
+  color: var(--active-color);
+}
+.logo .studio {
+  color: var(--white-color);
+}
+.site-nav {
+  display: flex;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link {
+  color: var(--head-collor);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  padding: 32px 0;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--active-color);
+}
+.site-nav .link.current {
+  border-bottom: 4px solid var(--active-color);
+  color: var(--active-color);
+}
+.header-contact {
+  display: flex;
+  margin-left: auto;
+}
+.header-contact .item:not(:last-child) {
+  margin-right: 30px;
+}
+.header-contact .link {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  padding: 32px 0;
+}
+.header-contact .link:hover,
+.header-contact .link:focus {
+  color: var(--active-color);
+}
+.footer {
+  background-color: #2f303a;
+}
+.footer > p {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-address address > p {
+  color: var(--white-color);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-bottom: 0;
+  /* outline: 1px solid black; */
+}
+.footer-address address > a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 10px;
+  /* outline: 1px solid black; */
+}
+.footer-socials .title,
+.signup .title {
+  color: var(--white-color);
+  text-transform: uppercase;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  margin: 9px 0 20px;
+}
+.footer-socials .list {
+  display: flex;
+}
+.footer-socials .list li:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-socials .link:hover,
+.footer-socials .link:focus {
+  background-color: var(--active-color);
+}
+.sign {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 12px;
+  line-height: 2;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+.signup .email {
+  min-width: 270px;
+  height: 50px;
+  /* padding: 10px 32px; */
+  margin-right: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: inherit;
+  color: inherit;
+}
+.container {
+  width: 1230px;
+  /* outline: 2px solid red; */
+  margin: 0 auto;
+  padding: 0 15px;
+  /* display: flex; */
+}
+.container .main-nav {
+  display: flex;
+  align-items: center;
+}
+.container.header {
+  display: flex;
+  align-items: center;
+  /* outline: 1px solid red; */
+}
+.container-footer {
+  padding-top: 48px;
+  /* padding-bottom: 20px; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  /* outline: 2px solid red; */
+}
+hr {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+.button {
+  background-color: var(--active-color);
+  color: var(--white-color);
+  padding: 10px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+  /* align-items: center; */
+  /* outline: 1px solid goldenrod; */
+}
