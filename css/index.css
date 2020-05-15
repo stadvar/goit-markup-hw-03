@@ -24,7 +24,7 @@
   margin-bottom: 46px;
 }
 .section-title {
-  display: none;
+  /* display: none; */
   color: var(--head-collor);
   margin: 0 0 50px;
   font-weight: 700;
