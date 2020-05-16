@@ -120,8 +120,7 @@
 .team-list > li > img {
   margin-bottom: 30px;
 }
-.social-list .link,
-.clients .link {
+.social-list .link {
   display: inline-block;
 }
 .social-list .link:hover,
@@ -134,24 +133,25 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
+.clients .link {
+  display: flex;
+  justify-content: center;
+  width: 175px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
 .clients .link:hover,
 .clients .link:focus {
-  background-color: var(--active-color);
+  border: 1px solid var(--active-color);
 }
 .clients {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .our-team {
   background-color: var(--team-bg-color);
 }
-
 .section {
   padding: 95px 0;
-  /* background-color: greenyellow; */
-  /* outline: 2px solid blue; */
 }

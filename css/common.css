@@ -199,3 +199,8 @@ body {
   /* align-items: center; */
   /* outline: 1px solid goldenrod; */
 }
+.button:hover,
+.button:focus {
+  background-color: #f5f4fa;
+  color: var(--head-collor);
+}
