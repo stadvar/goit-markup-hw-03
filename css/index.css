@@ -37,7 +37,12 @@
 }
 .feature-list {
   display: flex;
-  justify-content: space-between;
+}
+.feature-list li {
+  width: 278px;
+}
+.feature-list li:not(:last-child) {
+  margin-right: 29px;
 }
 .feature-list .title {
   color: var(--head-collor);
@@ -51,6 +56,9 @@
   margin-bottom: 30px;
   display: block;
 }
+.feature-list img:hover {
+  background-color: var(--active-color);
+}
 .feature-list .describe {
   font-size: 14px;
   line-height: 1.7;
@@ -58,13 +66,14 @@
   margin-bottom: 0px;
 }
 .works-list .link {
-  /* display: block; */
+  display: block;
   text-align: center;
   text-decoration: none;
 }
 .works-list .link img {
   display: block;
 }
+
 .works-list .title {
   padding: 27px 0;
   margin: 0;
@@ -83,10 +92,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .team-list .title {
   color: var(--head-collor);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -108,9 +115,14 @@
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  padding-bottom: 24px;
 }
 .team-list > li > img {
   margin-bottom: 30px;
+}
+.social-list .link,
+.clients .link {
+  display: inline-block;
 }
 .social-list .link:hover,
 .social-list .link:focus {
@@ -121,8 +133,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 24px;
-  /* text-align: center; */
 }
 
 .clients .link:hover,

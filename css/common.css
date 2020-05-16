@@ -56,13 +56,14 @@ body {
   letter-spacing: 0.02em;
   display: inline-block;
   padding: 32px 0;
+  border-bottom: 4px solid transparent;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--active-color);
+  border-bottom: 4px solid var(--active-color);
 }
 .site-nav .link.current {
-  border-bottom: 4px solid var(--active-color);
   color: var(--active-color);
 }
 .header-contact {
@@ -91,24 +92,29 @@ body {
 .footer > p {
   color: rgba(255, 255, 255, 0.6);
 }
+.footer-address .logo {
+  margin: 0 0 10px;
+}
 .footer-address address > p {
   color: var(--white-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
   /* outline: 1px solid black; */
 }
 .footer-address address > a {
-  display: inline-block;
+  display: block;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
-  margin-top: 10px;
-  /* outline: 1px solid black; */
+  margin-bottom: 10px;
+}
+.footer-address address > a + a {
+  margin: 0;
 }
 .footer-socials .title,
 .signup .title {
@@ -118,7 +124,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  margin: 9px 0 20px;
+  margin: 0 0 20px;
 }
 .footer-socials .list {
   display: flex;
@@ -126,24 +132,23 @@ body {
 .footer-socials .list li:not(:last-child) {
   margin-right: 10px;
 }
+.footer-socials .link {
+  display: inline-block;
+}
 .footer-socials .link:hover,
 .footer-socials .link:focus {
   background-color: var(--active-color);
 }
 .sign {
   margin: 0;
-  padding: 20px 0;
   font-size: 12px;
   line-height: 2;
-
   text-align: center;
-
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--white-color);
 }
 .signup .email {
   min-width: 270px;
   height: 50px;
-  /* padding: 10px 32px; */
   margin-right: 12px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -153,10 +158,8 @@ body {
 }
 .container {
   width: 1230px;
-  /* outline: 2px solid red; */
   margin: 0 auto;
   padding: 0 15px;
-  /* display: flex; */
 }
 .container .main-nav {
   display: flex;
@@ -175,9 +178,9 @@ body {
   justify-content: space-between;
   /* outline: 2px solid red; */
 }
-hr {
+.hr-line {
   margin-top: 28px;
-  margin-bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .button {
   background-color: var(--active-color);
