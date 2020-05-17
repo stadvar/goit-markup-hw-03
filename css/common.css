@@ -88,6 +88,7 @@ body {
 }
 .footer {
   background-color: #2f303a;
+  min-width: 1230px;
 }
 .footer > p {
   color: rgba(255, 255, 255, 0.6);

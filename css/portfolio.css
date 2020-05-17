@@ -33,7 +33,7 @@
   /* margin: -15px; */
 }
 .card-list .title {
-  margin: 20px 24px 0;
+  margin: 0 24px;
 
   color: var(--head-collor);
   font-weight: 700;
@@ -55,7 +55,11 @@
   line-height: 1.56;
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--white-color);
+  position: absolute;
+  top: 0;
+  padding: 63px 24px;
 }
+
 .card-list .card {
   width: 380px;
   border: 1px solid #eeeeee;
@@ -70,11 +74,17 @@
 .card-list .card > a {
   text-decoration: none;
   display: block;
+  position: relative;
 }
+
 .card-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.card-list > .card img {
+  display: block;
+  margin-bottom: 20px;
 }
 
 h1 {
