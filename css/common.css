@@ -17,10 +17,19 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+header {
+  border-bottom: 1px solid #ececec;
+  /* border-bottom: 1px solid red; */
 }
 .logo {
   display: inline-block;
@@ -42,6 +51,7 @@ body {
 }
 .site-nav {
   display: flex;
+  align-items: center;
 }
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
@@ -81,6 +91,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
+  display: inline-block;
 }
 .header-contact .link:hover,
 .header-contact .link:focus {
@@ -88,7 +99,7 @@ body {
 }
 .footer {
   background-color: #2f303a;
-  min-width: 1230px;
+  min-width: 1200px;
 }
 .footer > p {
   color: rgba(255, 255, 255, 0.6);
@@ -146,19 +157,21 @@ body {
   line-height: 2;
   text-align: center;
   color: var(--white-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .signup .email {
   min-width: 270px;
-  height: 50px;
+  /* height: 50px; */
   margin-right: 12px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: inherit;
   color: inherit;
+  padding: 15px 12px;
 }
 .container {
-  width: 1230px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -172,17 +185,12 @@ body {
   /* outline: 1px solid red; */
 }
 .container-footer {
-  padding-top: 48px;
-  /* padding-bottom: 20px; */
+  padding: 48px 0 28px;
   display: flex;
-  /* align-items: center; */
+  align-items: baseline;
   justify-content: space-between;
-  /* outline: 2px solid red; */
 }
-.hr-line {
-  margin-top: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 .button {
   background-color: var(--active-color);
   color: var(--white-color);
@@ -204,4 +212,17 @@ body {
 .button:focus {
   background-color: #f5f4fa;
   color: var(--head-collor);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.hidden {
+  display: none;
 }

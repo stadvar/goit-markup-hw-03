@@ -16,6 +16,10 @@
   text-align: center;
   min-width: 1230px;
   /* outline: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-title {
@@ -38,17 +42,19 @@
   line-height: 1.17;
   text-align: center;
 }
-.section.no-bottom-padd {
-  padding-bottom: 0;
+.container.bottborder {
+  border: 1px solid #ececec;
+  width: 1170px;
 }
 .feature-list {
   display: flex;
+  justify-content: space-between;
 }
 .feature-list li {
-  width: 278px;
+  width: calc((100% - 3 * 30px) / 4);
 }
 .feature-list li:not(:last-child) {
-  margin-right: 29px;
+  /* margin-right: 30px; */
 }
 .feature-list .title {
   color: var(--head-collor);
@@ -60,7 +66,6 @@
 }
 .feature-list img {
   margin-bottom: 30px;
-  display: block;
 }
 .feature-list img:hover {
   background-color: var(--active-color);
@@ -73,14 +78,13 @@
 }
 .works-list li {
   position: relative;
+  width: calc((100% - 2 * 30px) / 3);
 }
 .works-list .link {
   display: block;
   text-align: center;
   text-decoration: none;
-}
-.works-list .link img {
-  display: block;
+  width: 100%;
 }
 
 .works-list .title {
@@ -90,7 +94,7 @@
   background-color: rgba(47, 48, 58, 0.8);
   position: absolute;
   bottom: 0;
-  min-width: 380px;
+  width: 100%;
   border-radius: 0 0 4px 4px;
   font-weight: 700;
   font-size: 14px;
@@ -99,8 +103,8 @@
 }
 .works-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
 .team-list .title {
@@ -117,8 +121,8 @@
 }
 .team-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   text-align: center;
 }
@@ -127,6 +131,7 @@
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   padding-bottom: 24px;
+  width: calc((100% - 3 * 30px) / 4);
 }
 .team-list > li > img {
   margin-bottom: 30px;
@@ -147,7 +152,7 @@
 .clients .link {
   display: flex;
   justify-content: center;
-  width: 175px;
+  min-width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -162,7 +167,7 @@
 }
 .our-team {
   background-color: var(--team-bg-color);
-  min-width: 1230px;
+  min-width: 1200px;
 }
 .section {
   padding: 95px 0;

@@ -1,58 +1,61 @@
 window.onload = () => {
-  const Cweb = document.querySelectorAll('.card-list .c-web');
-  const Cdes = document.querySelectorAll('.card-list .c-des');
-  const Capp = document.querySelectorAll('.card-list .c-app');
-  const Cmar = document.querySelectorAll('.card-list .c-mar');
-  const Call = document.querySelectorAll('.card-list .card');
-  //console.log(Call);
+  //Обьявляем глобальнные переменные, получаем в них нужные значения.
+  let bttns = document.querySelectorAll('.filter-butt .link');
+  let cards = document.querySelectorAll('.card-list .card');
+  //Запускаем цикл на количество наших кнопочек, вешаем на них событие onclick.
+  for (let i = 0; i < bttns.length; i++) {
+    //bttns[i].onclick = () => {
+    let Bdata = bttns[i].getAttribute('data');
+    //
 
-  //--------------------ALL
-  const all = document.getElementById('all');
-  all.onclick = () => {
-    Call.forEach((E, i) => {
-      Call[i].style.display = 'list-item';
-    });
-  };
-
-  //------------------WEB
-  const web = document.getElementById('web');
-  web.onclick = () => {
-    Call.forEach((E, i) => {
-      Call[i].style.display = 'none';
-    });
-    Cweb.forEach((E, i) => {
-      Cweb[i].style.display = 'list-item';
-    });
-  };
-
-  //------------------DESIGN
-  const des = document.getElementById('des');
-  des.onclick = () => {
-    Call.forEach((E, i) => {
-      Call[i].style.display = 'none';
-    });
-    Cdes.forEach((E, i) => {
-      Cdes[i].style.display = 'list-item';
-    });
-  };
-  //------------------APPLICATION
-  const app = document.getElementById('app');
-  app.onclick = () => {
-    Call.forEach((E, i) => {
-      Call[i].style.display = 'none';
-    });
-    Capp.forEach((E, i) => {
-      Capp[i].style.display = 'list-item';
-    });
-  };
-  //------------------MARKETING
-  const mar = document.getElementById('mar');
-  mar.onclick = () => {
-    Call.forEach((E, i) => {
-      Call[i].style.display = 'none';
-    });
-    Cmar.forEach((E, i) => {
-      Cmar[i].style.display = 'list-item';
-    });
-  };
+    switch (Bdata) {
+      case 'all':
+        bttns[i].onclick = () => {
+          for (let i = 0; i < cards.length; i++) {
+            let aval = cards[i].classList.contains('hidden');
+            if (aval) {
+              cards[i].classList.remove('hidden');
+            }
+          }
+        };
+        break;
+      case 'web':
+        bttns[i].onclick = () => {
+          job('web');
+        };
+        break;
+      case 'app':
+        bttns[i].onclick = () => {
+          job('app');
+        };
+        break;
+      case 'des':
+        bttns[i].onclick = () => {
+          job('des');
+        };
+        break;
+      case 'mar':
+        bttns[i].onclick = () => {
+          job('mar');
+        };
+        break;
+      // default:
+      //   console.log('Нет таких значений');
+    }
+    //button onclick};
+  }
+  //******
+  function job(VaL) {
+    for (let i = 0; i < cards.length; i++) {
+      let Cdata = cards[i].getAttribute('data');
+      if (Cdata == VaL) {
+        let aval = cards[i].classList.contains('hidden');
+        if (aval) {
+          cards[i].classList.remove('hidden');
+        }
+      } else {
+        cards[i].classList.add('hidden');
+      }
+    }
+  }
 };

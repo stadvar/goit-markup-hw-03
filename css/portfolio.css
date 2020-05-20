@@ -1,10 +1,11 @@
 .portfol-nav .filter-butt + .filter-butt {
   margin-left: 8px;
 }
+
 .portfol-nav .link {
   display: inline-block;
   background-color: #f5f4fa;
-  text-decoration: none;
+  /* text-decoration: none; */
   color: var(--head-collor);
   /* margin: 10px; */
   font-weight: 500;
@@ -15,6 +16,7 @@
 
   border-radius: 4px;
   padding: 6px 22px;
+  border: 1px solid transparent;
 }
 
 .portfol-nav .link:hover,
@@ -32,8 +34,14 @@
   padding: 94px 15px;
   /* margin: -15px; */
 }
+.card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .card-list .title {
-  margin: 0 24px;
+  margin: 0;
 
   color: var(--head-collor);
   font-weight: 700;
@@ -42,7 +50,7 @@
   letter-spacing: 0.06em;
 }
 .card-list .type {
-  margin: 0 24px 20px;
+  margin: 0;
   font-size: 16px;
   line-height: 1.87;
 
@@ -50,10 +58,10 @@
 }
 .card-list .about {
   margin: 0;
-  display: none;
+  border-radius: 5px;
   font-size: 18px;
   line-height: 1.56;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.8);
   color: var(--white-color);
   position: absolute;
   top: 0;
@@ -62,10 +70,8 @@
 
 .card-list .card {
   margin: 10px;
-  /* width: 380px; */
   width: calc((100% - 2 * 30px) / 3);
-  border: 1px solid #eeeeee;
-  border-radius: 5px;
+  /* outline: 1px solid black; */
 }
 .card-list .card:hover {
   /* transform: scale(1.05); */
@@ -80,19 +86,25 @@
   text-decoration: none;
   display: block;
   position: relative;
+  /* overflow: hidden; */
+}
+.card-list .card .describe {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-radius: 0 0 5px 5px;
+}
+.card-list .describe:hover + .about.about-hidden {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s opacity, 0.5s visibility;
+  /* display: block; */
 }
 
-.card-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.card-list > .card img {
-  display: block;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-h1 {
-  display: none;
+.about-hidden {
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.5s opacity, 1.5s visibility;
 }
